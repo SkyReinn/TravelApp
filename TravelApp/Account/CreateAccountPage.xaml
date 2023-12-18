@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelApp.CreateAccountPage"
+             Title="CreateAccountPage">
+    <VerticalStackLayout VerticalOptions="Center" Spacing="10">
+
+        <Entry
+        x:Name="username"
+        Placeholder="Enter a username:"
+        BackgroundColor="White"
+        TextColor="Black"
+        WidthRequest="270"
+        />
+
+        <Entry
+        x:Name="password"
+        Placeholder="Enter a password:"
+        BackgroundColor="White"
+        TextColor="Black"
+        WidthRequest="270"
+        />
+
+        <Button
+        Text="Save"
+        Clicked="OnSaveButtonClicked"
+        HorizontalOptions="Center" 
+        CornerRadius="7"
+        BackgroundColor="DarkGray"
+        TextColor="White"
+        WidthRequest="100"
+        />
+    </VerticalStackLayout>
+</ContentPage>

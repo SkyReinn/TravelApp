@@ -55,10 +55,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Account\CreateAccountPage.xaml">
+	  <MauiXaml Update="AccountLogin\CreateAccountPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Account\LoginPage.xaml">
+	  <MauiXaml Update="AccountLogin\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -4,31 +4,30 @@
              x:Class="TravelApp.CreateAccountPage"
              Title="CreateAccountPage">
     <VerticalStackLayout VerticalOptions="Center" Spacing="10">
+        <Entry
+            x:Name="username"
+            Placeholder="Enter a username:"
+            BackgroundColor="White"
+            TextColor="Black"
+            WidthRequest="270"
+            />
 
         <Entry
-        x:Name="username"
-        Placeholder="Enter a username:"
-        BackgroundColor="White"
-        TextColor="Black"
-        WidthRequest="270"
-        />
-
-        <Entry
-        x:Name="password"
-        Placeholder="Enter a password:"
-        BackgroundColor="White"
-        TextColor="Black"
-        WidthRequest="270"
-        />
+            x:Name="password"
+            Placeholder="Enter a password:"
+            BackgroundColor="White"
+            TextColor="Black"
+            WidthRequest="270"
+            />
 
         <Button
-        Text="Save"
-        Clicked="OnSaveButtonClicked"
-        HorizontalOptions="Center" 
-        CornerRadius="7"
-        BackgroundColor="DarkGray"
-        TextColor="White"
-        WidthRequest="100"
-        />
+            Text="Save"
+            Clicked="OnSaveButtonClicked"
+            HorizontalOptions="Center" 
+            CornerRadius="7"
+            BackgroundColor="DarkGray"
+            TextColor="White"
+            WidthRequest="100"
+            />
     </VerticalStackLayout>
 </ContentPage>

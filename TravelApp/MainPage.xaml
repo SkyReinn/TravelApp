@@ -6,17 +6,17 @@
 
     <AbsoluteLayout>
         <Image 
-        Source="C:\Users\David Wang\Desktop\Projects\App Development\Unit3\TravelApp\TravelApp\Resources\Images\searchbar.png"
-        WidthRequest="475" HeightRequest="180"
-        AbsoluteLayout.LayoutBounds="0.5,0.3,AutoSize,AutoSize"
-        AbsoluteLayout.LayoutFlags="PositionProportional" 
-        />
-
-        <Entry 
-        Placeholder="Where would you like to travel?"
-        AbsoluteLayout.LayoutBounds="0.5,0.366,230,AutoSize"
-        AbsoluteLayout.LayoutFlags="PositionProportional" 
-        TextColor="Black"
-        />
+            Source="C:\Users\David Wang\Desktop\Projects\App Development\Unit3\TravelApp\TravelApp\Resources\Images\searchbar.png"
+            WidthRequest="475" HeightRequest="180"
+            AbsoluteLayout.LayoutBounds="0.5,0.3,AutoSize,AutoSize"
+            AbsoluteLayout.LayoutFlags="PositionProportional" 
+            />
+        
+        <Entry
+            Placeholder="Where would you like to travel?"
+            AbsoluteLayout.LayoutBounds="0.5,0.366,230,AutoSize"
+            AbsoluteLayout.LayoutFlags="PositionProportional" 
+            TextColor="Black"
+            />
     </AbsoluteLayout>
 </ContentPage>

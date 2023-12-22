@@ -5,7 +5,6 @@
              Title="LoginPage">
 
     <VerticalStackLayout VerticalOptions="Center" Spacing="10">
-        
         <Entry
             x:Name="username"
             Placeholder="Username:"
@@ -20,6 +19,7 @@
             BackgroundColor="White"
             TextColor="Black"
             WidthRequest="270"
+            IsPassword="true"
             />
 
         <Button

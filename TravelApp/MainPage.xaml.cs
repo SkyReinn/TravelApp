@@ -37,14 +37,28 @@ namespace TravelApp
                 // Deserialize JSON to select names of tourist attractions
                 var jsonObject = JsonObject.Parse(content);
                 var results = jsonObject["results"];
-                foreach(var result in results)
+                // New changes here
+                if (results is JsonArray jsonArray)
                 {
-                    if(result["name"])
+                    foreach (var result in jsonArray)
                     {
+                        
+                        var attractionName = result["name"];
 
+                        
+                        System.Diagnostics.Debug.WriteLine(attractionName);
                     }
                 }
-                System.Diagnostics.Debug.WriteLine(results);
+
+
+                //foreach (var result in results)
+                //{
+                //    if(result["name"])
+                //    {
+
+                //    }
+                //}
+                //System.Diagnostics.Debug.WriteLine(results);
 
             }
 

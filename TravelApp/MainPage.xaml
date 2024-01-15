@@ -17,6 +17,7 @@
             AbsoluteLayout.LayoutBounds="0.5,0.366,230,AutoSize"
             AbsoluteLayout.LayoutFlags="PositionProportional" 
             TextColor="Black"
+            Completed="LoadData"
             />
     </AbsoluteLayout>
 </ContentPage>

@@ -8,6 +8,7 @@ namespace TravelApp
     public partial class MainPage : ContentPage
     {
         public string apiKey;
+        List<string> attractions = new List<string>();
 
         public MainPage()
         {
@@ -26,9 +27,14 @@ namespace TravelApp
             // Load the API Key
             await LoadApiKey();
 
+            // Encode the entered destination
+            var entry = (Entry)sender;
+            var destination = entry.Text;
+            var encodedText = Uri.EscapeDataString(destination);
+
             // Use HttpClient to get JSON data from the URL using the API key
             var client = new HttpClient();
-            var response = await client.GetAsync($"https://maps.googleapis.com/maps/api/place/textsearch/json?query=new+york+city+point+of+interest&language=en&key={apiKey}");
+            var response = await client.GetAsync($"https://maps.googleapis.com/maps/api/place/textsearch/json?query={encodedText}+points+of+interest&language=en&key={apiKey}");
 
             if (response.IsSuccessStatusCode)
             {
@@ -37,18 +43,20 @@ namespace TravelApp
                 // Deserialize JSON to select names of tourist attractions
                 var jsonObject = JsonObject.Parse(content);
                 var results = jsonObject["results"];
-                foreach(var result in results)
+
+                // Add the names of the attractions to a list
+                foreach(var result in results.AsArray())
                 {
-                    if(result["name"])
-                    {
-
-                    }
+                    string name = result["name"].ToString();
+                    attractions.Add(name);
                 }
-                System.Diagnostics.Debug.WriteLine(results);
 
+                // Print out the list in console
+                foreach(var attraction in attractions)
+                    System.Diagnostics.Debug.WriteLine(attraction);
             }
 
-            await Navigation.PushAsync(new InfoPage());
+            await Navigation.PushAsync(new InfoPage(destination, attractions, apiKey));
         }
     }
 }

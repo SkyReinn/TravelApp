@@ -3,21 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TravelApp.MainPage"
              BackgroundColor="White">
+    <StackLayout>
+        <Label Text="Welcome to HitchHiker" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,0" TextColor="Black"/>
+        <AbsoluteLayout>
+            <Image 
+        Source="C:\Users\David Wang\Desktop\Projects\App Development\Unit3\TravelApp\TravelApp\Resources\Images\searchbar.png"
+        WidthRequest="475" HeightRequest="180"
+        AbsoluteLayout.LayoutBounds="0.5,0.3,AutoSize,AutoSize"
+        AbsoluteLayout.LayoutFlags="PositionProportional" 
+        />
 
-    <AbsoluteLayout>
-        <Image 
-            Source="C:\Users\David Wang\Desktop\Projects\App Development\Unit3\TravelApp\TravelApp\Resources\Images\searchbar.png"
-            WidthRequest="475" HeightRequest="180"
-            AbsoluteLayout.LayoutBounds="0.5,0.3,AutoSize,AutoSize"
-            AbsoluteLayout.LayoutFlags="PositionProportional" 
-            />
-        
-        <Entry
-            Placeholder="Where would you like to travel?"
-            AbsoluteLayout.LayoutBounds="0.5,0.366,230,AutoSize"
-            AbsoluteLayout.LayoutFlags="PositionProportional" 
-            TextColor="Black"
-            Completed="LoadData"
-            />
-    </AbsoluteLayout>
+            <Entry
+        Placeholder="Where would you like to travel?"
+        AbsoluteLayout.LayoutBounds="0.5,0.366,230,AutoSize"
+        AbsoluteLayout.LayoutFlags="PositionProportional" 
+        TextColor="Black"
+        Completed="LoadData"
+        />
+        </AbsoluteLayout>
+        <Label Text="This is the app that you can use to visit all of your dream destinations" FontSize="Medium" HorizontalOptions="Center" TextColor="Black" Margin="0,10,0,0" />
+
+    </StackLayout>
+    
 </ContentPage>

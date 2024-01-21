@@ -9,6 +9,7 @@ public partial class LoginPage : ContentPage
 	{
 		InitializeComponent();
 		accountDB = new AccountDatabase();
+
 	}
 
 	private async void OnLoginButtonClicked(object sender, EventArgs e)
@@ -36,4 +37,5 @@ public partial class LoginPage : ContentPage
 
 		await Navigation.PushAsync(createAccountPage);
 	}
+    
 }

@@ -1,41 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TravelApp.MainPage">
+             x:Class="TravelApp.MainPage"
+             BackgroundColor="White">
+    <StackLayout>
+        <Label Text="Welcome to HitchHiker" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,0" TextColor="Black"/>
+        <AbsoluteLayout>
+            <Image 
+        Source="C:\Users\David Wang\Desktop\Projects\App Development\Unit3\TravelApp\TravelApp\Resources\Images\searchbar.png"
+        WidthRequest="475" HeightRequest="180"
+        AbsoluteLayout.LayoutBounds="0.5,0.3,AutoSize,AutoSize"
+        AbsoluteLayout.LayoutFlags="PositionProportional" 
+        />
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+            <Entry
+        Placeholder="Where would you like to travel?"
+        AbsoluteLayout.LayoutBounds="0.5,0.366,230,AutoSize"
+        AbsoluteLayout.LayoutFlags="PositionProportional" 
+        TextColor="Black"
+        Completed="LoadData"
+        />
+        </AbsoluteLayout>
+        <Label Text="This is the app that you can use to visit all of your dream destinations" FontSize="Medium" HorizontalOptions="Center" TextColor="Black" Margin="0,10,0,0" />
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
-
+    </StackLayout>
+    
 </ContentPage>
